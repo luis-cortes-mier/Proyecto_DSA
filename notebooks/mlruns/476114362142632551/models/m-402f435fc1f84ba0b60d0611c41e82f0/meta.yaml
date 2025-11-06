@@ -1,0 +1,10 @@
+artifact_location: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/models/m-402f435fc1f84ba0b60d0611c41e82f0/artifacts
+creation_timestamp: 1762403482400
+experiment_id: '476114362142632551'
+last_updated_timestamp: 1762403484221
+model_id: m-402f435fc1f84ba0b60d0611c41e82f0
+model_type: null
+name: model_EfficientCycle_v2
+source_run_id: f4d06b41540f4c9e9660250be0442a3f
+status: 2
+status_message: null

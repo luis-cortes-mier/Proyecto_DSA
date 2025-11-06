@@ -1,0 +1,10 @@
+artifact_location: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/models/m-e479eb1c52b34802a979423597073d28/artifacts
+creation_timestamp: 1762403457431
+experiment_id: '476114362142632551'
+last_updated_timestamp: 1762403459334
+model_id: m-e479eb1c52b34802a979423597073d28
+model_type: null
+name: model_LoadStopTime
+source_run_id: a80f656cad88455ca60f756f2e5ac9d0
+status: 2
+status_message: null
