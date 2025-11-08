@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/54cfbb48804b41cfb14979cca94378c6/artifacts
+end_time: 1762568183002
+entry_point_name: ''
+experiment_id: '496775632379775562'
+lifecycle_stage: active
+run_id: 54cfbb48804b41cfb14979cca94378c6
+run_name: clf_EfficientCycle
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762568181042
+status: 3
+tags: []
+user_id: victorbonilla

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/1dc3380c7a9e41c7b8ec6e2a7a7e78ec/artifacts
+end_time: 1762569022047
+entry_point_name: ''
+experiment_id: '496775632379775562'
+lifecycle_stage: active
+run_id: 1dc3380c7a9e41c7b8ec6e2a7a7e78ec
+run_name: RandomForestRegressor_LoadStopTime
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762569019726
+status: 3
+tags: []
+user_id: victorbonilla

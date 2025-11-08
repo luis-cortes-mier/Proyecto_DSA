@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/18f5396474864a57a2d5a4db96dae48e/artifacts
+end_time: 1762568312303
+entry_point_name: ''
+experiment_id: '496775632379775562'
+lifecycle_stage: active
+run_id: 18f5396474864a57a2d5a4db96dae48e
+run_name: reg_LoadStopTime
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762568310016
+status: 3
+tags: []
+user_id: victorbonilla

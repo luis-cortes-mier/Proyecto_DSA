@@ -1,0 +1,23 @@
+artifact_path: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/models/m-49528592aa0a47b98073b32f79fcd561/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+mlflow_version: 3.5.1
+model_id: m-49528592aa0a47b98073b32f79fcd561
+model_size_bytes: 68281384
+model_uuid: m-49528592aa0a47b98073b32f79fcd561
+prompts: null
+run_id: 18f5396474864a57a2d5a4db96dae48e
+utc_time_created: '2025-11-08 02:18:30.639628'

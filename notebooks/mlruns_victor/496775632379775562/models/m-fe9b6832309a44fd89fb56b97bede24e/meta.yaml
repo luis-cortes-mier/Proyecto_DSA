@@ -1,0 +1,11 @@
+artifact_location: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/models/m-fe9b6832309a44fd89fb56b97bede24e/artifacts
+creation_timestamp: 1762569022370
+experiment_id: '496775632379775562'
+last_updated_timestamp: 1762569024075
+model_id: m-fe9b6832309a44fd89fb56b97bede24e
+model_type: null
+name: model_GradientBoostingRegressor_LoadStopTime
+source_run_id: 9438f4aaf53a43d5b83c6978ab1ebb1a
+status: 2
+status_message: null

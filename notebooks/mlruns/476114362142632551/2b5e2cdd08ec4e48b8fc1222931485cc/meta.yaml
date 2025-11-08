@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/2b5e2cdd08ec4e48b8fc1222931485cc/artifacts
+end_time: 1762567420418
+entry_point_name: ''
+experiment_id: '476114362142632551'
+lifecycle_stage: active
+run_id: 2b5e2cdd08ec4e48b8fc1222931485cc
+run_name: reg_EmptyStopTime
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762567417194
+status: 4
+tags: []
+user_id: victorbonilla

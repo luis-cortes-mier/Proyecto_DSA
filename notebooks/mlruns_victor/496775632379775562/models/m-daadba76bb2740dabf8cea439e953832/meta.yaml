@@ -1,0 +1,11 @@
+artifact_location: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/models/m-daadba76bb2740dabf8cea439e953832/artifacts
+creation_timestamp: 1762568282109
+experiment_id: '496775632379775562'
+last_updated_timestamp: 1762568283705
+model_id: m-daadba76bb2740dabf8cea439e953832
+model_type: null
+name: model_EfficientCycle_v2
+source_run_id: 268ed9d3b0294bc5998a994c14a52e11
+status: 2
+status_message: null

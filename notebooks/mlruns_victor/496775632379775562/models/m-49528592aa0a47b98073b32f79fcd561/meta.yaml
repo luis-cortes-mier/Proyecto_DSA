@@ -1,0 +1,11 @@
+artifact_location: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/models/m-49528592aa0a47b98073b32f79fcd561/artifacts
+creation_timestamp: 1762568310635
+experiment_id: '496775632379775562'
+last_updated_timestamp: 1762568312301
+model_id: m-49528592aa0a47b98073b32f79fcd561
+model_type: null
+name: model_LoadStopTime
+source_run_id: 18f5396474864a57a2d5a4db96dae48e
+status: 2
+status_message: null

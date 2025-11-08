@@ -1,0 +1,11 @@
+artifact_location: file:///Users/victorbonilla/Documents/MIAD/1er Semestre/2do Ciclo/Machine
+  Learning/Semana 1/Proyecto_DSA/notebooks/mlruns_victor/496775632379775562/models/m-87abc5f5d92042e5809919e1455d40b1/artifacts
+creation_timestamp: 1762569018038
+experiment_id: '496775632379775562'
+last_updated_timestamp: 1762569019720
+model_id: m-87abc5f5d92042e5809919e1455d40b1
+model_type: null
+name: model_GradientBoostingRegressor_EmptyStopTime
+source_run_id: e9a6e3d8a2044edcbb73ac975e86fd75
+status: 2
+status_message: null
