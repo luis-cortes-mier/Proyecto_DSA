@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/39d71fea80474d0fb4bdb81046a20477/artifacts
+deleted_time: 1762563801094
+end_time: 1762556993228
+entry_point_name: ''
+experiment_id: '476114362142632551'
+lifecycle_stage: deleted
+run_id: 39d71fea80474d0fb4bdb81046a20477
+run_name: clf_EfficientCycle
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762556991365
+status: 3
+tags: []
+user_id: luiscortes

@@ -1,8 +1,9 @@
 artifact_uri: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/4eb8ebb22bff417189310130907dada6/artifacts
+deleted_time: 1762561958848
 end_time: 1762403405981
 entry_point_name: ''
 experiment_id: '476114362142632551'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 4eb8ebb22bff417189310130907dada6
 run_name: reg_EmptyStopTime
 source_name: ''

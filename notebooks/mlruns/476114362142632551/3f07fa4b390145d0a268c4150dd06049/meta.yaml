@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/3f07fa4b390145d0a268c4150dd06049/artifacts
+end_time: 1762569608007
+entry_point_name: ''
+experiment_id: '476114362142632551'
+lifecycle_stage: active
+run_id: 3f07fa4b390145d0a268c4150dd06049
+run_name: reg_LoadStopTime_V1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762569605637
+status: 3
+tags: []
+user_id: luiscortes
