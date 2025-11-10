@@ -1,0 +1,10 @@
+artifact_location: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/models/m-aa52a5083dae44188d5d99fcf049ef1e/artifacts
+creation_timestamp: 1762569768461
+experiment_id: '476114362142632551'
+last_updated_timestamp: 1762569770296
+model_id: m-aa52a5083dae44188d5d99fcf049ef1e
+model_type: null
+name: model_EmptyStopTime_V2_Tuned
+source_run_id: 47f7634004ca4138a03e90053424e0db
+status: 2
+status_message: null
