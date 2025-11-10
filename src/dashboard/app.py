@@ -70,12 +70,12 @@ app.layout = dbc.Container([
         ], color="dark", inverse=True), width=3),
 
         dbc.Col(dbc.Card([
-            dbc.CardHeader("Detenciones en Vacío > 6 min"),
+            dbc.CardHeader("Detenciones Camion Vacío > 6 min"),
             dbc.CardBody(html.H3(det_vacio, className="text-center text-warning"))
         ], color="secondary", inverse=True), width=3),
 
         dbc.Col(dbc.Card([
-            dbc.CardHeader("Detenciones en Cargue > 6 min"),
+            dbc.CardHeader("Detenciones Camion Cargado > 6 min"),
             dbc.CardBody(html.H3(det_cargado, className="text-center text-danger"))
         ], color="dark", inverse=True), width=3),
 
