@@ -4,15 +4,13 @@ from dash import Dash, dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 import plotly.express as px
 
-# ========================================================
 # CONFIGURACIÓN INICIAL
-# ========================================================
+
 API_URL = "http://127.0.0.1:8500"  # Puerto FastAPI
 DATA_PATH = "/Users/luiscortes/Desktop/Proyecto_DSA/data/df_final.csv"  # Ruta dataset
 
-# ========================================================
+
 # CARGA DE DATOS
-# ========================================================
 try:
     df = pd.read_csv(DATA_PATH)
     print(" Datos cargados correctamente:", df.shape)
@@ -20,9 +18,9 @@ except Exception as e:
     print(f" Error al cargar datos: {e}")
     df = pd.DataFrame()
 
-# ========================================================
+
 # PREPARACIÓN DE DATOS
-# ========================================================
+
 if not df.empty:
     df["DateTime"] = pd.to_datetime(df["DateTime"], errors="coerce")
     df["Shift"] = df["Shift_Night"].apply(lambda x: "Night" if x else "Day")
@@ -49,15 +47,15 @@ if not df.empty:
 else:
     pct_ef, det_vacio, det_cargado, total = 0, 0, 0, 0
 
-# ========================================================
+
 # DASH APP
-# ========================================================
+
 app = Dash(__name__, external_stylesheets=[dbc.themes.SLATE])
 app.title = "Tablero Predictivo - Transporte Minero"
 
-# ========================================================
+
 # LAYOUT
-# ========================================================
+
 app.layout = dbc.Container([
     html.H2("Calidad de ciclos y detenciones improductivas de camiones 793", className="text-center text-danger mt-3"),
     html.Hr(),
@@ -87,7 +85,7 @@ app.layout = dbc.Container([
 
     html.Br(),
 
-    # --- Nueva gráfica circular de eficiencia ---
+    #  gráfica circular de eficiencia 
     dbc.Card([
         dbc.CardHeader("Distribución de Ciclos Eficientes vs. Ineficientes", className="bg-secondary text-white"),
         dbc.CardBody([
@@ -112,9 +110,9 @@ app.layout = dbc.Container([
 
     html.Br(),
 
-    # ========================================================
+    
     # GRÁFICAS DE TENDENCIA
-    # ========================================================
+   
     dbc.Card([
         dbc.CardHeader("Tendencia de tiempos de ciclo y detenciones por hora", className="bg-secondary text-white"),
         dbc.CardBody([
@@ -143,9 +141,9 @@ app.layout = dbc.Container([
 
     html.Br(),
 
-    # ========================================================
+    
     # PREDICCIONES
-    # ========================================================
+  
     html.H4("Predicciones de Modelos", className="text-danger"),
 
     # Modelo EmptyStopTime
@@ -225,9 +223,9 @@ app.layout = dbc.Container([
     ], color="dark", outline=True)
 ], fluid=True)
 
-# ========================================================
+
 # CALLBACKS
-# ========================================================
+
 @app.callback(
     [Output("cycle-hour-graph", "figure"),
      Output("stop-comparison-graph", "figure")],
@@ -270,12 +268,12 @@ def update_graphs(turn):
             )
         return fig1, fig2
     except Exception as e:
-        print(f"⚠️ Error en update_graphs: {e}")
+        print(f"Error en update_graphs: {e}")
         return px.line(title="Error al graficar"), px.bar(title="Error al graficar")
 
-# ========================================================
+
 # FUNCIONES DE PREDICCIÓN
-# ========================================================
+
 def build_regression_json(payload, fuel, cycle, emptytravel, loadtime, loadtravel, hour, shift):
     return {
         "Payload": payload, "FuelBurned": fuel, "CycleTime": cycle,
@@ -283,7 +281,7 @@ def build_regression_json(payload, fuel, cycle, emptytravel, loadtime, loadtrave
         **{f"Hour_{i}": (i == hour) for i in range(1, 24)},
         "Shift_Night": shift
     }
-# --- Predicciones (callbacks) ---
+# Predicciones (callbacks) 
 @app.callback(Output("empty_output", "children"), Input("predict_empty_btn", "n_clicks"),
               State("payload_empty", "value"), State("fuel_empty", "value"),
               State("cycle_empty", "value"), State("emptytravel", "value"),
@@ -297,7 +295,7 @@ def predict_empty(n, payload, fuel, cycle, emptytravel, loadtime, loadtravel, ho
         res = requests.post(f"{API_URL}/predict_empty_stop", json=features)
         return f"Predicción: {res.json()['EmptyStopTime_pred']} min"
     except Exception as e:
-        return f"⚠️ Error: {e}"
+        return f"Error: {e}"
 
 @app.callback(Output("load_output", "children"), Input("predict_load_btn", "n_clicks"),
               State("payload_load", "value"), State("fuel_load", "value"),
@@ -312,7 +310,7 @@ def predict_load(n, payload, fuel, cycle, emptytravel, loadtime, loadtravel, hou
         res = requests.post(f"{API_URL}/predict_load_stop", json=features)
         return f" Predicción: {res.json()['LoadStopTime_pred']} min"
     except Exception as e:
-        return f"⚠️ Error: {e}"
+        return f"Error: {e}"
 
 @app.callback(Output("efficiency_output", "children"),
               Input("predict_efficiency_btn", "n_clicks"),
@@ -336,9 +334,9 @@ def predict_efficiency(n, payload, fuel, dist, emptytime, emptydist, loadtime, l
         }
         res = requests.post(f"{API_URL}/predict_efficiency", json=features)
         js = res.json()
-        return f"⚙️ Predicción: {js['Label']} (Probabilidad: {js['EfficientCycle_prob']:.2f})"
+        return f"Predicción: {js['Label']} (Probabilidad: {js['EfficientCycle_prob']:.2f})"
     except Exception as e:
-        return f"⚠️ Error: {e}"
+        return f"Error: {e}"
 
 # ========================================================
 # EJECUCIÓN
