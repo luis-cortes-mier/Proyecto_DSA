@@ -5,14 +5,12 @@ import numpy as np
 import pandas as pd
 import os
 
-# =======================================================
 # Inicialización de la API
-# =======================================================
 app = FastAPI(title="API Modelos Predictivos Transporte Minero")
 
-# =======================================================
+
 # Cargar modelos (rutas absolutas seguras)
-# =======================================================
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 
@@ -20,11 +18,11 @@ model_empty = joblib.load(os.path.join(MODEL_DIR, "model_EmptyStopTime_V2_Tuned.
 model_load = joblib.load(os.path.join(MODEL_DIR, "model_LoadStopTime_V2_Tuned.pkl"))
 model_clf = joblib.load(os.path.join(MODEL_DIR, "model_EfficientCycle.pkl"))
 
-print("✅ Modelos cargados correctamente desde:", MODEL_DIR)
+print(" Modelos cargados correctamente desde:", MODEL_DIR)
 
-# =======================================================
+
 # Definir esquemas (entradas) para los modelos de regresión
-# =======================================================
+
 class RegressionData(BaseModel):
     Payload: float
     FuelBurned: float
@@ -58,9 +56,8 @@ class RegressionData(BaseModel):
     Shift_Night: bool
 
 
-# =======================================================
 # Rutas base
-# =======================================================
+
 @app.get("/")
 def home():
     return {
@@ -73,9 +70,8 @@ def home():
     }
 
 
-# =======================================================
-# 1️⃣ Modelo EmptyStopTime
-# =======================================================
+
+# Modelo EmptyStopTime
 @app.post("/predict_empty_stop")
 def predict_empty_stop(data: RegressionData):
     X = np.array(list(data.dict().values())).reshape(1, -1)
@@ -83,9 +79,8 @@ def predict_empty_stop(data: RegressionData):
     return {"EmptyStopTime_pred": round(float(pred), 2)}
 
 
-# =======================================================
-# 2️⃣ Modelo LoadStopTime
-# =======================================================
+
+# Modelo LoadStopTime
 @app.post("/predict_load_stop")
 def predict_load_stop(data: RegressionData):
     X = np.array(list(data.dict().values())).reshape(1, -1)
@@ -93,9 +88,8 @@ def predict_load_stop(data: RegressionData):
     return {"LoadStopTime_pred": round(float(pred), 2)}
 
 
-# =======================================================
-# 3️⃣ Modelo EfficientCycle (clasificación, 33 columnas)
-# =======================================================
+
+# Modelo EfficientCycle (clasificación, 33 columnas)
 @app.post("/predict_efficiency")
 async def predict_efficiency(request: Request):
     data = await request.json()  # recibe el JSON crudo del dashboard
@@ -117,7 +111,7 @@ async def predict_efficiency(request: Request):
             X[col] = 0
     X = X[expected]
 
-    # --- Predicción ---
+    # Predicción
     pred = model_clf.predict(X)[0]
     prob = model_clf.predict_proba(X)[0][1]
     label = "Eficiente" if pred == 1 else "Ineficiente"
