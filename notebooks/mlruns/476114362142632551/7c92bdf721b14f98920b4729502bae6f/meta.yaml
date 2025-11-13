@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/mlruns/476114362142632551/7c92bdf721b14f98920b4729502bae6f/artifacts
+end_time: 1763049817980
+entry_point_name: ''
+experiment_id: '476114362142632551'
+lifecycle_stage: active
+run_id: 7c92bdf721b14f98920b4729502bae6f
+run_name: smoke_test
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763049817975
+status: 3
+tags: []
+user_id: luiscortes
