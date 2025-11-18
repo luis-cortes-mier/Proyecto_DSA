@@ -3,11 +3,14 @@ import requests
 from dash import Dash, dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 import plotly.express as px
+import os
 
 # CONFIGURACIÓN INICIAL
-
-API_URL = "http://127.0.0.1:8500"  # Puerto FastAPI
-DATA_PATH = "/Users/luiscortes/Desktop/Proyecto_DSA/data/df_final.csv"  # Ruta dataset
+# Detecta automáticamente el entorno:
+# Si estás corriendo localmente → usa localhost
+# Si estás en Docker Compose → usa el nombre del servicio (api)
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8500")
+DATA_PATH = os.getenv("DATA_PATH", "data/df_final.csv")
 
 
 # CARGA DE DATOS
@@ -342,4 +345,5 @@ def predict_efficiency(n, payload, fuel, dist, emptytime, emptydist, loadtime, l
 # EJECUCIÓN
 # ========================================================
 if __name__ == "__main__":
-    app.run(debug=True, port=8050)
+    app.run(debug=False, host="0.0.0.0", port=8050)
+
