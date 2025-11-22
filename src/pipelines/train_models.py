@@ -13,7 +13,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, f1_score, r
 import joblib
 
 # Configuración de MLflow
-mlflow.set_tracking_uri("file:../../mlruns")
+mlflow.set_tracking_uri("http://18.208.126.149:5000")
 mlflow.set_experiment("Proyecto_DSA_Experimentos")
 
 # Cargar dataset procesado

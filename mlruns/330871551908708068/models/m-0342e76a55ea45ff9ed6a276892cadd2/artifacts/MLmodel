@@ -1,0 +1,22 @@
+artifact_path: file:///Users/luiscortes/Desktop/Proyecto_DSA/notebooks/../mlruns/330871551908708068/models/m-0342e76a55ea45ff9ed6a276892cadd2/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 3.5.1
+model_id: m-0342e76a55ea45ff9ed6a276892cadd2
+model_size_bytes: 138601
+model_uuid: m-0342e76a55ea45ff9ed6a276892cadd2
+prompts: null
+run_id: 22e3192cb6c0464e9d04171dfc889c81
+utc_time_created: '2025-11-22 04:25:12.553720'
