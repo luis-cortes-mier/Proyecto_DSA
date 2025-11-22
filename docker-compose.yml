@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  # ======================
+  # 1. API - FastAPI
+  # ======================
+  api:
+    build: .
+    container_name: proyecto_dsa_api
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8500:8000"
+    volumes:
+      - .:/app
+    environment:
+      - MODEL_DIR=/app/models
+      - DATA_DIR=/app/data
+    restart: always
+
+  # ======================
+  # 2. DASHBOARD - Dash
+  # ======================
+  dashboard:
+    build: .
+    container_name: proyecto_dsa_dashboard
+    command: python src/dashboard/app.py
+    ports:
+      - "8550:8050"
+    volumes:
+      - .:/app
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://api:8000
+      - DATA_PATH=/app/data/df_final.csv
+    restart: always
+
+ 
