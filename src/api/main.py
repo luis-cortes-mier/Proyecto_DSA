@@ -65,7 +65,7 @@ class RegressionData(BaseModel):
 @app.get("/")
 def home():
     return {
-        "message": "✅ API funcionando correctamente.",
+        "message": "API funcionando correctamente.",
         "endpoints": [
             "/predict_empty_stop",
             "/predict_load_stop",
